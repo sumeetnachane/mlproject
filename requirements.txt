@@ -1,0 +1,37 @@
+pandas 
+numpy
+seaborn
+-e .  # current project ko install karo (editable mode me)
+
+
+# Isme jo list di hai woh (setup.py) me install_requires ke andar pass karni hai. Jisse jab bhi koi is package ko install karega toh ye dependencies automatically install ho jayengi.
+
+
+# 🧠 Example se samjho
+
+# Maan lo tumhare paas project hai:
+
+# MLProject/
+# │── setup.py
+# │── src/
+# │    └── components/
+# │         └── data_ingestion.py
+
+# ❌ Without -e .
+
+# Agar tum normal install karte ho:
+
+# pip install .
+
+# 👉 Problem:
+
+# code copy ho jata hai environment me
+# agar tum file change karo → update reflect nahi hota
+
+# ✅ With -e .
+# pip install -e .
+
+# 👉 Benefits:
+
+# project “link” ho jata hai environment se
+# tum code change karo → direct reflect hota hai
